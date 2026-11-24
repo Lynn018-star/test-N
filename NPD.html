@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="theme-color" content="#fdf2f8">
+<title>Ta 是自恋型人格吗？｜22 题专业评估</title>
+<meta name="description" content="基于心理学自恋人格研究，22 道题看清身边那个让你内耗的人，生成专属解读与应对建议。">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap">
+<style>
+  :root{
+    --bg1:#fdf2f8; --bg2:#f0f9ff; --bg3:#fef3c7;
+    --primary:#ec4899; --primary2:#f472b6; --primary-deep:#be185d;
+    --accent:#8b5cf6; --warm:#f59e0b; --warm2:#fb923c;
+    --ink:#1f2937; --ink-soft:#374151; --muted:#6b7280; --faint:#9ca3af;
+    --card:#ffffff; --line:#fce7f3;
+    --shadow:0 10px 40px -12px rgba(190,24,93,.18);
+    --shadow-soft:0 4px 20px -8px rgba(139,92,246,.15);
+  }
+  *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;}
+  body{
+    font-family:"Noto Sans SC",-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+    color:var(--ink);
+    background:linear-gradient(160deg,var(--bg1) 0%,var(--bg2) 48%,var(--bg3) 100%);
+    background-attachment:fixed;
+    min-height:100vh;
+    line-height:1.6;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{font-family:"Noto Serif SC",serif;}
+
+  /* 背景装饰 blob */
+  .bg-blobs{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;}
+  .blob{position:absolute;border-radius:50%;filter:blur(50px);opacity:.55;animation:float 14s ease-in-out infinite;}
+  .blob.b1{width:340px;height:340px;background:#fbcfe8;top:-80px;left:-90px;}
+  .blob.b2{width:300px;height:300px;background:#ddd6fe;top:38%;right:-110px;animation-delay:-4s;}
+  .blob.b3{width:280px;height:280px;background:#fde68a;bottom:-90px;left:20%;animation-delay:-8s;}
+  @keyframes float{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-26px) scale(1.05);}}
+
+  .app{position:relative;z-index:1;max-width:520px;margin:0 auto;padding:20px 18px 60px;min-height:100vh;}
+  @media(min-width:560px){.app{padding-top:36px;}}
+
+  .view{display:none;animation:fadeIn .5s ease both;}
+  .view.active{display:block;}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(14px);}to{opacity:1;transform:translateY(0);}}
+
+  /* 通用卡片 */
+  .card{background:rgba(255,255,255,.86);backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.9);border-radius:26px;box-shadow:var(--shadow);padding:22px;}
+
+  .btn{
+    display:flex;align-items:center;justify-content:center;gap:8px;width:100%;border:none;cursor:pointer;
+    font-family:inherit;font-weight:700;font-size:17px;color:#fff;
+    padding:16px 22px;border-radius:18px;
+    background:linear-gradient(120deg,var(--primary) 0%,var(--accent) 100%);
+    box-shadow:0 10px 24px -8px rgba(236,72,153,.55);
+    transition:transform .15s ease, box-shadow .2s ease, filter .2s ease;
+  }
+  .btn:active{transform:scale(.97);}
+  .btn.ghost{background:#fff;color:var(--primary-deep);box-shadow:var(--shadow-soft);border:1px solid var(--line);}
+  .btn-row{display:flex;gap:12px;}
+
+  /* ===== 首页 ===== */
+  .hero{position:relative;text-align:center;padding:8px 0 6px;}
+  .hero-art{position:relative;width:210px;height:210px;margin:0 auto 18px;}
+  .hero-art .halo{position:absolute;inset:0;border-radius:50%;background:conic-gradient(from 210deg,#fbcfe8,#ddd6fe,#fde68a,#fbcfe8);filter:blur(2px);opacity:.85;animation:spin 22s linear infinite;}
+  .hero-art .core{position:absolute;inset:22px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff 0%,#fce7f3 55%,#fbcfe8 100%);display:flex;align-items:center;justify-content:center;box-shadow:inset 0 4px 18px rgba(255,255,255,.8);}
+  @keyframes spin{to{transform:rotate(360deg);}}
+  .hero h1{font-size:30px;font-weight:900;line-height:1.3;letter-spacing:.5px;
+    background:linear-gradient(120deg,var(--primary-deep),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent;}
+  .hero .sub{margin-top:10px;font-size:15px;color:var(--muted);padding:0 10px;}
+
+  .chips{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:20px 0 4px;}
+  .chip{font-size:12.5px;font-weight:500;color:#9d174d;background:#fce7f3;border:1px solid #fbcfe8;padding:6px 12px;border-radius:999px;}
+
+  .intro{margin-top:22px;}
+  .intro h2{font-size:18px;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .intro h2 .dot{width:8px;height:8px;border-radius:50%;background:var(--primary);}
+  .intro p{font-size:14px;color:var(--ink-soft);}
+  .features{display:grid;grid-template-columns:1fr;gap:12px;margin-top:16px;}
+  .feature{display:flex;gap:12px;align-items:flex-start;background:linear-gradient(120deg,#fff,#fdf2f8);border:1px solid var(--line);border-radius:18px;padding:14px;}
+  .feature .ic{flex:0 0 40px;width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;background:linear-gradient(135deg,#fbcfe8,#ddd6fe);}
+  .feature h3{font-size:15px;margin-bottom:2px;}
+  .feature p{font-size:12.5px;color:var(--muted);}
+
+  .notice{margin-top:18px;font-size:11.5px;color:var(--faint);text-align:center;line-height:1.7;}
+
+  /* ===== 答题页 ===== */
+  .quiz-head{margin-bottom:18px;}
+  .quiz-top{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--muted);margin-bottom:10px;}
+  .quiz-top .step{font-weight:700;color:var(--primary-deep);}
+  .progress{height:10px;border-radius:999px;background:#fce7f3;overflow:hidden;}
+  .progress > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--primary),var(--accent));transition:width .5s cubic-bezier(.22,1,.36,1);}
+
+  .q-card{min-height:200px;display:flex;flex-direction:column;justify-content:center;}
+  .q-text{font-family:"Noto Serif SC",serif;font-size:20px;font-weight:700;line-height:1.55;color:var(--ink);text-align:center;padding:6px 4px 20px;animation:fadeIn .4s ease both;}
+  .q-hint{text-align:center;font-size:12px;color:var(--faint);margin-bottom:14px;}
+
+  .options{display:flex;flex-direction:column;gap:11px;}
+  .opt{
+    display:flex;align-items:center;justify-content:space-between;gap:10px;
+    background:#fff;border:1.5px solid #f3e8ff;border-radius:16px;padding:15px 16px;cursor:pointer;
+    font-size:15.5px;color:var(--ink-soft);font-weight:500;transition:all .2s ease;
+  }
+  .opt:hover{border-color:var(--primary2);transform:translateY(-1px);box-shadow:var(--shadow-soft);}
+  .opt:active{transform:scale(.98);}
+  .opt .tag{font-size:11px;color:var(--muted);background:#f5f3ff;border-radius:8px;padding:3px 8px;}
+  .opt.sel{border-color:var(--primary);background:linear-gradient(120deg,#fdf2f8,#f5f3ff);color:var(--primary-deep);font-weight:700;}
+  .opt.sel .tag{background:var(--primary);color:#fff;}
+
+  .quiz-foot{display:flex;justify-content:space-between;align-items:center;margin-top:18px;}
+  .link-btn{background:none;border:none;cursor:pointer;font-size:14px;color:var(--muted);font-family:inherit;padding:8px 4px;}
+  .link-btn:disabled{color:var(--faint);cursor:default;}
+
+  /* ===== 结果页 ===== */
+  .result-hero{text-align:center;padding:10px 0 4px;}
+  .ring{position:relative;width:200px;height:200px;margin:0 auto 16px;}
+  .ring .bg{position:absolute;inset:0;border-radius:50%;background:conic-gradient(var(--lvl,#ec4899) calc(var(--pct,0)*1%),#fce7f3 0);filter:saturate(1.05);transition:background .3s;}
+  .ring .hole{position:absolute;inset:18px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#fdf2f8);display:flex;flex-direction:column;align-items:center;justify-content:center;box-shadow:inset 0 4px 16px rgba(255,255,255,.9);}
+  .ring .num{font-family:"Noto Serif SC",serif;font-size:52px;font-weight:900;line-height:1;color:var(--lvl,#ec4899);}
+  .ring .unit{font-size:12px;color:var(--muted);margin-top:4px;}
+  .badge{display:inline-block;padding:7px 18px;border-radius:999px;font-size:15px;font-weight:700;color:#fff;background:var(--lvl,#ec4899);box-shadow:0 6px 16px -4px var(--lvl,#ec4899);}
+  .result-hero h1{font-size:24px;margin-top:14px;line-height:1.35;color:var(--ink);padding:0 8px;}
+  .result-hero .lead{font-size:14px;color:var(--muted);margin-top:8px;}
+
+  .section{margin-top:18px;}
+  .section-title{font-size:16px;font-weight:700;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
+  .section-title::before{content:"";width:4px;height:16px;border-radius:3px;background:linear-gradient(var(--primary),var(--accent));}
+
+  .dim-list{display:flex;flex-direction:column;gap:13px;}
+  .dim{display:grid;grid-template-columns:96px 1fr 46px;align-items:center;gap:10px;}
+  .dim .name{font-size:13px;font-weight:600;color:var(--ink-soft);}
+  .dim .bar{height:12px;border-radius:999px;background:#f3e8ff;overflow:hidden;}
+  .dim .bar > i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,var(--primary2),var(--accent));transition:width 1.1s cubic-bezier(.22,1,.36,1);}
+  .dim .pct{font-size:12.5px;font-weight:700;color:var(--primary-deep);text-align:right;}
+
+  .insight{background:linear-gradient(120deg,#fff,#fdf4ff);border:1px solid #f5d0fe;border-radius:18px;padding:16px;margin-top:12px;}
+  .insight h4{font-size:14px;color:var(--primary-deep);margin-bottom:6px;display:flex;align-items:center;gap:6px;}
+  .insight p{font-size:13.5px;color:var(--ink-soft);}
+  .insight + .insight{margin-top:10px;}
+
+  .advice{background:linear-gradient(160deg,#fff7ed,#fef2f2);border:1px solid #fed7aa;border-radius:20px;padding:18px;}
+  .advice ol{list-style:none;counter-reset:a;display:flex;flex-direction:column;gap:11px;}
+  .advice li{counter-increment:a;font-size:13.5px;color:var(--ink-soft);padding-left:30px;position:relative;line-height:1.6;}
+  .advice li::before{content:counter(a);position:absolute;left:0;top:0;width:20px;height:20px;border-radius:50%;background:linear-gradient(135deg,var(--warm2),var(--primary));color:#fff;font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center;}
+
+  .disclaimer{margin-top:18px;background:rgba(255,255,255,.6);border:1px dashed #f9a8d4;border-radius:16px;padding:14px 16px;font-size:11.5px;color:var(--muted);line-height:1.75;}
+  .disclaimer b{color:var(--primary-deep);}
+
+  .result-actions{margin-top:22px;display:flex;flex-direction:column;gap:12px;}
+
+  .toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(20px);background:rgba(31,41,55,.92);color:#fff;padding:11px 20px;border-radius:14px;font-size:13px;opacity:0;pointer-events:none;transition:all .3s ease;z-index:50;}
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+</style>
+</head>
+<body>
+<div class="bg-blobs"><div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div></div>
+
+<div class="app">
+
+  <!-- 首页 -->
+  <section class="view active" id="view-home">
+    <div class="hero">
+      <div class="hero-art">
+        <div class="halo"></div>
+        <div class="core">
+          <svg width="86" height="86" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#ec4899"></stop><stop offset="1" stop-color="#8b5cf6"></stop>
+              </linearGradient>
+            </defs>
+            <path d="M50 88 C20 66 10 50 10 36 C10 24 20 16 30 16 C38 16 46 21 50 30 C54 21 62 16 70 16 C80 16 90 24 90 36 C90 50 80 66 50 88 Z" fill="url(#g1)" opacity="0.92"></path>
+            <circle cx="38" cy="38" r="5" fill="#fff" opacity="0.85"></circle>
+          </svg>
+        </div>
+      </div>
+      <h1>Ta 是自恋型人格吗？</h1>
+      <p class="sub">22 道题，看清身边那个让你内耗的人<br>生成专属解读与科学应对建议</p>
+      <div class="chips">
+        <span class="chip">心理学研究依据</span>
+        <span class="chip">6 大维度拆解</span>
+        <span class="chip">手机端适配</span>
+      </div>
+    </div>
+
+    <div class="card intro">
+      <h2><span class="dot"></span>这能帮你看清什么</h2>
+      <p>你是否总在一段关系里反复内耗——付出很多却不被看见，对方永远有理，你却开始怀疑自己？<br>本测评基于自恋人格研究，帮你系统评估身边这个人（伴侣、朋友、家人或同事）的自恋特质倾向，并给出可执行的应对方向。</p>
+      <div class="features">
+        <div class="feature">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be185d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"></path></svg></div>
+          <div><h3>多维度量化</h3><p>自大、崇拜需求、剥削、共情缺失等 6 个维度分别打分</p></div>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h4"></path></svg></div>
+          <div><h3>专属解读报告</h3><p>根据你的答案生成个性化分析，不止一个分数</p></div>
+        </div>
+        <div class="feature">
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+          <div><h3>可执行应对建议</h3><p>不同风险等级对应不同的相处与自保策略</p></div>
+        </div>
+      </div>
+      <p class="notice">请根据你对这个人<strong>真实、一贯</strong>的观察作答，而非某一次的偶发行为。<br>本测评仅供参考，不能替代专业心理诊断。</p>
+    </div>
+
+    <div style="height:18px"></div>
+    <button class="btn" id="startBtn">开始测评</button>
+    <p class="notice" style="margin-top:12px">约需 3 分钟 · 22 道题 · 完成后生成专属解读报告</p>
+  </section>
+
+  <!-- 答题页 -->
+  <section class="view" id="view-quiz">
+    <div class="quiz-head">
+      <div class="quiz-top"><span>测评进度</span><span class="step" id="stepText">第 1 / 22 题</span></div>
+      <div class="progress"><i id="progressBar"></i></div>
+    </div>
+    <div class="card q-card">
+      <p class="q-hint">请回想你要评估的这个人，根据其<strong>一贯表现</strong>选择</p>
+      <div class="q-text" id="qText"></div>
+      <div class="options" id="options"></div>
+    </div>
+    <div class="quiz-foot">
+      <button class="link-btn" id="prevBtn">‹ 上一题</button>
+      <span class="notice" style="margin:0">选完自动进入下一题</span>
+    </div>
+  </section>
+
+  <!-- 结果页 -->
+  <section class="view" id="view-result">
+    <div class="result-hero">
+      <div class="ring" id="ring">
+        <div class="bg"></div>
+        <div class="hole">
+          <div class="num" id="scoreNum">0</div>
+          <div class="unit">自恋特质指数</div>
+        </div>
+      </div>
+      <div class="badge" id="levelBadge">评估中…</div>
+      <h1 id="resultTitle"></h1>
+      <p class="lead" id="resultLead"></p>
+    </div>
+
+    <div class="card section">
+      <div class="section-title">六维度拆解</div>
+      <div class="dim-list" id="dimList"></div>
+      <div id="insights"></div>
+    </div>
+
+    <div class="card section" style="background:transparent;box-shadow:none;padding:0;border:none;">
+      <div class="advice" id="adviceBox"></div>
+    </div>
+
+    <div class="disclaimer" id="disclaimerBox"></div>
+
+    <div class="result-actions">
+      <button class="btn" id="restartBtn">重新测评</button>
+    </div>
+    <p class="notice" style="margin-top:16px">结果基于你的主观观察，仅供参考</p>
+  </section>
+
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   测试数据配置区 —— 后续做新测试，只需替换这里的内容即可
+   ============================================================ */
+const QUIZ = {
+  dimensions: [
+    { key:"grandiosity",  name:"自大优越感", max:16,
+      high:"Ta 根深蒂固地觉得自己高人一等、理应被特殊对待，这会让 Ta 无视规则、轻视他人，把你的付出视作理所当然。" },
+    { key:"admiration",   name:"被崇拜需求", max:16,
+      high:"Ta 对赞美的渴望近乎成瘾，得不到就情绪低落或发怒，你需要不断去「喂养」Ta 的自我，却很少得到同等回馈。" },
+    { key:"exploitation", name:"剥削利用",   max:16,
+      high:"Ta 倾向于把你当作达成目的的工具，关系中只有索取没有对等付出，一旦你失去利用价值就会被疏远。" },
+    { key:"empathy",      name:"共情缺失",   max:16,
+      high:"Ta 很难真正体会你的感受，你的痛苦在 Ta 那里常常得不到回应，甚至被无视、被贬低为「太敏感」。" },
+    { key:"envy",         name:"嫉妒与竞争", max:16,
+      high:"Ta 见不得别人好，会贬低你的成就，或在一切事情上与你竞争、压你一头，无法真心为你高兴。" },
+    { key:"vulnerability",name:"脆弱敏感",   max:8,
+      high:"Ta 的自尊外强中干，一点小事就觉得被冒犯，常用冷战、生闷气或被动攻击来「惩罚」你，让你反复自我怀疑。" }
+  ],
+  questions: [
+    { d:"grandiosity",  t:"他是否觉得自己比身边大多数人都更优秀、更特殊" },
+    { d:"grandiosity",  t:"他是否认为自己理应得到特殊待遇或额外优待" },
+    { d:"grandiosity",  t:"他是否常常夸大自己的成就、才能或重要性" },
+    { d:"grandiosity",  t:"他是否会看不起那些他认为「不如自己」的人" },
+    { d:"admiration",   t:"他是否非常需要别人的赞美和关注，得不到就闷闷不乐" },
+    { d:"admiration",   t:"他是否喜欢成为人群中的焦点，享受被注视的感觉" },
+    { d:"admiration",   t:"他是否一有机会就炫耀自己的优点、财富或经历" },
+    { d:"admiration",   t:"他是否在被批评时反应强烈，极力否认或立刻反击" },
+    { d:"exploitation", t:"他是否会利用他人来达成自己的目的，不太顾及对方的代价" },
+    { d:"exploitation", t:"他是否在交朋友或谈恋爱时，更看重对方能给自己带来什么" },
+    { d:"exploitation", t:"他是否只在需要帮助时才主动联系别人" },
+    { d:"exploitation", t:"他是否不把承诺当回事，觉得「结果好就行」" },
+    { d:"empathy",      t:"他是否对他人的痛苦或困难显得冷漠、漠不关心" },
+    { d:"empathy",      t:"他是否很难真正理解或体谅别人的感受" },
+    { d:"empathy",      t:"别人倾诉时，他是否常把话题转回自己身上" },
+    { d:"empathy",      t:"他是否对服务员、快递员等服务人员态度傲慢" },
+    { d:"envy",         t:"他是否常常嫉妒别人取得的成功或拥有的东西" },
+    { d:"envy",         t:"他是否认为别人的成功靠的是运气或不正当手段" },
+    { d:"envy",         t:"他是否在任何场合都想赢，想压过别人一头" },
+    { d:"envy",         t:"他是否总觉得周围很多人都在嫉妒自己" },
+    { d:"vulnerability",t:"他是否自尊很脆弱，一点小事就觉得被冒犯或受了伤" },
+    { d:"vulnerability",t:"他是否表面谦虚，内心却觉得自己被低估、怀才不遇" }
+  ],
+  options: [
+    { label:"从不", score:0 },
+    { label:"很少", score:1 },
+    { label:"有时", score:2 },
+    { label:"经常", score:3 },
+    { label:"总是", score:4 }
+  ],
+  levels: [
+    { min:0,  max:25, name:"健康区间", color:"#10b981",
+      title:"Ta 的自恋特质处于健康区间",
+      lead:"从你的观察来看，这个人并没有明显的自恋型人格特质。",
+      summary:"Ta 能够相对平等地看待他人，顾及别人的感受，在关系中具备基本的互惠与共情能力。每个人都有适度的自我关注，这本身是健康的；只要不影响关系，就无需过度担忧。",
+      advice:[
+        "继续以真诚、平等的方式相处，不必用「自恋」标签去解读对方的每一个行为。",
+        "留意关系中你最真实的感受：舒服、被尊重，就是最重要的信号。",
+        "如果偶有矛盾，优先用直接沟通解决，而不是先往人格上归因。"
+      ]},
+    { min:26, max:50, name:"轻度倾向", color:"#f59e0b",
+      title:"Ta 存在一定程度的自恋倾向",
+      lead:"这些表现在很多人身上都存在，未必构成问题，但已值得留意。",
+      summary:"这个人身上可以观察到一些自恋特质的影子，比如偶尔的自我中心、对赞美的需求或面对批评时的防御。它们是否构成问题，关键看频率和强度——是偶发的，还是在多数场景下反复出现并让你感到不适。",
+      advice:[
+        "区分「偶尔自恋」与「稳定模式」：观察这些行为是偶发，还是在多数场景下反复出现。",
+        "在关系中练习表达感受：当对方让你不舒服时，平静地说出来，看 Ta 是否能倾听。",
+        "守住你的边界：不必为了「维持关系」一味迁就，健康的关系需要双方妥协。",
+        "不要试图「拯救」或「改变」对方，那通常不是你的责任。"
+      ]},
+    { min:51, max:75, name:"明显倾向", color:"#f97316",
+      title:"Ta 的自恋特质较为明显",
+      lead:"与这样的人相处，你可能常常感到被忽视、被利用或情绪内耗。",
+      summary:"根据你的评估，这个人展现出相当明显的自恋型人格特质：自我中心、需要被特殊对待、缺乏共情、可能利用他人。这不是你的错，而是对方长期形成的人际模式。你在这段关系里的疲惫感是真实的。",
+      advice:[
+        "降低期待：不要期待 Ta 能真正共情你或为你改变，放下「我对 Ta 好 Ta 就会改」的幻想。",
+        "设立清晰边界：明确哪些行为你不能接受，并在被越界时果断执行后果，而不只是口头警告。",
+        "减少情感暴露：不要把你的脆弱、秘密全盘托出，这些可能被 Ta 用来拿捏你。",
+        "把注意力拉回自己：你的价值不由 Ta 的评价决定，重建自己的支持系统（朋友、家人、爱好）。",
+        "认真考虑这段关系是否值得维持：如果它持续消耗你，离开也是一种自爱。"
+      ]},
+    { min:76, max:100,name:"高度符合", color:"#e11d48",
+      title:"Ta 高度符合自恋型人格特质",
+      lead:"请认真对待这个结果——你的感受是真实的。",
+      summary:"你的评估显示，这个人高度符合自恋型人格的典型特征：强烈的优越感、对赞美的饥渴、剥削他人的倾向、显著的共情缺失，以及脆弱易怒的自尊。与这样的人深度相处（尤其亲密关系），极易造成情感贬低、认知扭曲（gaslighting）和长期心理创伤。",
+      advice:[
+        "安全第一：若关系中存在贬低、威胁、控制、暴力或让你怀疑自我的 gaslighting，请优先保障自己的身心安全。",
+        "不要私下对质或试图讲理：自恋者被挑战时极易升级攻击且不会认错，少接触、少解释更安全。",
+        "建立「无接触 / 低接触」原则：能断开就断开；必须接触（如共同育儿、工作）时只谈具体事务，不谈情感。",
+        "寻求专业支持：长期处在自恋关系中会留下创伤，建议寻找熟悉自恋型虐待 / 创伤的心理咨询师。",
+        "告知可信的人：把情况告诉一两个你信任的朋友或家人，避免被孤立，也为自己留好退路。"
+      ]}
+  ],
+  disclaimer:"本测评基于心理学自恋人格研究（参考自恋人格量表 NPI 及相关临床特征）编制，仅供自我探索与关系参考，<b>不能替代专业心理诊断</b>。自恋型人格障碍的确诊需由具备资质的精神科医生或临床心理师做出。请勿仅凭本结果给他人贴标签、下诊断，或据此做出重大人生决定。若你正身处一段让你持续痛苦或感到危险的关系，请及时向信任的人或专业机构求助。"
+};
+
+/* ============================================================
+   逻辑与渲染
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const views = { home:$("#view-home"), quiz:$("#view-quiz"), result:$("#view-result") };
+const total = QUIZ.questions.length;
+const maxTotal = total * 4;
+let state = { i:0, answers:new Array(total).fill(null) };
+
+function show(name){
+  Object.values(views).forEach(v=>v.classList.remove("active"));
+  views[name].classList.add("active");
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+
+function renderQuestion(){
+  const q = QUIZ.questions[state.i];
+  $("#stepText").textContent = `第 ${state.i+1} / ${total} 题`;
+  $("#progressBar").style.width = ((state.i)/total*100)+"%";
+  $("#qText").textContent = q.t;
+  const box = $("#options");
+  box.innerHTML = "";
+  QUIZ.options.forEach((o,idx)=>{
+    const el = document.createElement("div");
+    el.className = "opt" + (state.answers[state.i]===o.score ? " sel":"");
+    el.innerHTML = `<span>${o.label}</span><span class="tag">${idx}</span>`;
+    el.addEventListener("click", ()=>{
+      state.answers[state.i] = o.score;
+      // 选中动画后下一题
+      document.querySelectorAll(".opt").forEach(e=>e.classList.remove("sel"));
+      el.classList.add("sel");
+      setTimeout(next, 280);
+    });
+    box.appendChild(el);
+  });
+  $("#prevBtn").disabled = state.i===0;
+}
+
+function next(){
+  if(state.i < total-1){
+    state.i++;
+    renderQuestion();
+  } else {
+    finish();
+  }
+}
+function prev(){
+  if(state.i>0){ state.i--; renderQuestion(); }
+}
+
+function finish(){
+  // 容错：未答的题按 0 计
+  const scores = state.answers.map(s=> s===null?0:s);
+  const totalScore = scores.reduce((a,b)=>a+b,0);
+  const index = Math.round(totalScore / maxTotal * 100);
+
+  // 维度得分
+  const dims = QUIZ.dimensions.map(dim=>{
+    let s=0;
+    QUIZ.questions.forEach((q,qi)=>{ if(q.d===dim.key) s += scores[qi]; });
+    return { ...dim, score:s, pct: Math.round(s/dim.max*100) };
+  });
+
+  const level = QUIZ.levels.find(l=> index>=l.min && index<=l.max) || QUIZ.levels[QUIZ.levels.length-1];
+
+  renderResult(index, level, dims);
+  show("result");
+}
+
+function renderResult(index, level, dims){
+  // 指数环
+  const ring = $("#ring");
+  ring.style.setProperty("--pct", index);
+  ring.style.setProperty("--lvl", level.color);
+  // 数字滚动
+  animateNumber($("#scoreNum"), 0, index, 1100);
+  $("#levelBadge").textContent = level.name;
+  $("#levelBadge").style.background = level.color;
+  $("#levelBadge").style.boxShadow = `0 6px 16px -4px ${level.color}`;
+  $("#resultTitle").textContent = level.title;
+  $("#resultLead").textContent = level.lead;
+
+  // 维度条
+  const dl = $("#dimList");
+  dl.innerHTML = "";
+  dims.forEach(d=>{
+    const row = document.createElement("div");
+    row.className = "dim";
+    row.innerHTML = `<div class="name">${d.name}</div><div class="bar"><i></i></div><div class="pct">${d.pct}%</div>`;
+    dl.appendChild(row);
+  });
+  // 触发条动画
+  setTimeout(()=>{
+    dims.forEach((d,i)=>{
+      const bar = dl.children[i].querySelector(".bar > i");
+      if(bar) bar.style.width = d.pct + "%";
+    });
+  }, 250);
+
+  // 高分维度解读
+  const ins = $("#insights");
+  ins.innerHTML = "";
+  const highDims = dims.filter(d=>d.pct>=60).sort((a,b)=>b.pct-a.pct);
+  if(highDims.length){
+    const wrap = document.createElement("div");
+    wrap.innerHTML = `<div class="section-title" style="margin-top:18px">重点关注</div>`;
+    ins.appendChild(wrap);
+    highDims.forEach(d=>{
+      const box = document.createElement("div");
+      box.className = "insight";
+      box.innerHTML = `<h4>${d.name} · ${d.pct}%</h4><p>${d.high}</p>`;
+      ins.appendChild(box);
+    });
+  } else {
+    const box = document.createElement("div");
+    box.className = "insight";
+    box.style.marginTop = "18px";
+    box.innerHTML = `<h4>整体平稳</h4><p>各维度得分均未出现明显偏高，说明你观察到的自恋特质并不突出。继续以自己的真实感受作为判断关系的首要依据即可。</p>`;
+    ins.appendChild(box);
+  }
+
+  // 总结 + 建议
+  const adv = $("#adviceBox");
+  let html = `<div class="section-title" style="color:#9a3412">解读与建议</div>`;
+  html += `<p style="font-size:13.5px;color:var(--ink-soft);margin-bottom:14px;line-height:1.75">${level.summary}</p>`;
+  html += `<ol>${level.advice.map(a=>`<li>${a}</li>`).join("")}</ol>`;
+  adv.innerHTML = html;
+
+  $("#disclaimerBox").innerHTML = QUIZ.disclaimer;
+}
+
+function animateNumber(el, from, to, dur){
+  const start = performance.now();
+  function tick(now){
+    const p = Math.min(1,(now-start)/dur);
+    const eased = 1 - Math.pow(1-p, 3);
+    el.textContent = Math.round(from + (to-from)*eased);
+    if(p<1) requestAnimationFrame(tick);
+  }
+  requestAnimationFrame(tick);
+}
+
+function showToast(msg){
+  const t = $("#toast");
+  t.textContent = msg;
+  t.classList.add("show");
+  setTimeout(()=>t.classList.remove("show"), 2200);
+}
+
+$("#startBtn").addEventListener("click", ()=>{
+  state = { i:0, answers:new Array(total).fill(null) };
+  renderQuestion();
+  show("quiz");
+});
+$("#prevBtn").addEventListener("click", prev);
+$("#restartBtn").addEventListener("click", ()=>{
+  state = { i:0, answers:new Array(total).fill(null) };
+  renderQuestion();
+  show("quiz");
+});
+</script>
+
+
+</body></html>
