@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="zh-CN"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#fdf2f8">
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<meta name="theme-color" content="#fdf2f8" />
 <title>Ta 是自恋型人格吗？｜22 题专业评估</title>
-<meta name="description" content="基于心理学自恋人格研究，22 道题看清身边那个让你内耗的人，生成专属解读与应对建议。">
-<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&amp;family=Noto+Sans+SC:wght@400;500;700&amp;display=swap">
+<meta name="description" content="基于心理学自恋人格研究，22 道题看清身边那个让你内耗的人，生成专属解读与应对建议。" />
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=Noto+Serif+SC:wght@500;700;900&family=Noto+Sans+SC:wght@400;500;700&display=swap" />
 <style>
   :root{
     --bg1:#fdf2f8; --bg2:#f0f9ff; --bg3:#fef3c7;
@@ -150,6 +151,17 @@
 
   .toast{position:fixed;left:50%;bottom:34px;transform:translateX(-50%) translateY(20px);background:rgba(31,41,55,.92);color:#fff;padding:11px 20px;border-radius:14px;font-size:13px;opacity:0;pointer-events:none;transition:all .3s ease;z-index:50;}
   .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+
+  /* 解锁卡片 */
+  .unlock-card{background:#fff;border-radius:18px;padding:22px 18px;text-align:center;box-shadow:var(--shadow);border:1px dashed #fbbf24;margin-top:6px;}
+  .unlock-icon{font-size:30px;margin-bottom:6px;}
+  .unlock-title{font-size:16px;font-weight:700;color:var(--ink);margin-bottom:6px;}
+  .unlock-desc{font-size:12.5px;color:var(--ink-soft);line-height:1.6;margin-bottom:14px;}
+  .unlock-row{display:flex;gap:8px;max-width:340px;margin:0 auto;}
+  .unlock-row input{flex:1;padding:11px 12px;border:1px solid #e5e7eb;border-radius:10px;font-size:14px;outline:none;background:#fff;}
+  .unlock-row input:focus{border-color:var(--brand);}
+  .unlock-btn{white-space:nowrap;padding:0 16px;}
+  .unlock-tip{font-size:11.5px;color:#9ca3af;margin-top:10px;}
 </style>
 </head>
 <body>
@@ -166,16 +178,16 @@
           <svg width="86" height="86" viewBox="0 0 100 100" fill="none" aria-hidden="true">
             <defs>
               <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0" stop-color="#ec4899"></stop><stop offset="1" stop-color="#8b5cf6"></stop>
+                <stop offset="0" stop-color="#ec4899"/><stop offset="1" stop-color="#8b5cf6"/>
               </linearGradient>
             </defs>
-            <path d="M50 88 C20 66 10 50 10 36 C10 24 20 16 30 16 C38 16 46 21 50 30 C54 21 62 16 70 16 C80 16 90 24 90 36 C90 50 80 66 50 88 Z" fill="url(#g1)" opacity="0.92"></path>
-            <circle cx="38" cy="38" r="5" fill="#fff" opacity="0.85"></circle>
+            <path d="M50 88 C20 66 10 50 10 36 C10 24 20 16 30 16 C38 16 46 21 50 30 C54 21 62 16 70 16 C80 16 90 24 90 36 C90 50 80 66 50 88 Z" fill="url(#g1)" opacity="0.92"/>
+            <circle cx="38" cy="38" r="5" fill="#fff" opacity="0.85"/>
           </svg>
         </div>
       </div>
       <h1>Ta 是自恋型人格吗？</h1>
-      <p class="sub">22 道题，看清身边那个让你内耗的人<br>生成专属解读与科学应对建议</p>
+      <p class="sub">22 道题，看清身边那个让你内耗的人<br />生成专属解读与科学应对建议</p>
       <div class="chips">
         <span class="chip">心理学研究依据</span>
         <span class="chip">6 大维度拆解</span>
@@ -185,22 +197,22 @@
 
     <div class="card intro">
       <h2><span class="dot"></span>这能帮你看清什么</h2>
-      <p>你是否总在一段关系里反复内耗——付出很多却不被看见，对方永远有理，你却开始怀疑自己？<br>本测评基于自恋人格研究，帮你系统评估身边这个人（伴侣、朋友、家人或同事）的自恋特质倾向，并给出可执行的应对方向。</p>
+      <p>你是否总在一段关系里反复内耗——付出很多却不被看见，对方永远有理，你却开始怀疑自己？<br />本测评基于自恋人格研究，帮你系统评估身边这个人（伴侣、朋友、家人或同事）的自恋特质倾向，并给出可执行的应对方向。</p>
       <div class="features">
         <div class="feature">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be185d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"></path></svg></div>
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#be185d" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
           <div><h3>多维度量化</h3><p>自大、崇拜需求、剥削、共情缺失等 6 个维度分别打分</p></div>
         </div>
         <div class="feature">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><path d="M14 2v6h6M9 13h6M9 17h4"></path></svg></div>
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#7c3aed" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></div>
           <div><h3>专属解读报告</h3><p>根据你的答案生成个性化分析，不止一个分数</p></div>
         </div>
         <div class="feature">
-          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+          <div class="ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#d97706" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
           <div><h3>可执行应对建议</h3><p>不同风险等级对应不同的相处与自保策略</p></div>
         </div>
       </div>
-      <p class="notice">请根据你对这个人<strong>真实、一贯</strong>的观察作答，而非某一次的偶发行为。<br>本测评仅供参考，不能替代专业心理诊断。</p>
+      <p class="notice">请根据你对这个人<strong>真实、一贯</strong>的观察作答，而非某一次的偶发行为。<br />本测评仅供参考，不能替代专业心理诊断。</p>
     </div>
 
     <div style="height:18px"></div>
@@ -243,14 +255,30 @@
     <div class="card section">
       <div class="section-title">六维度拆解</div>
       <div class="dim-list" id="dimList"></div>
-      <div id="insights"></div>
     </div>
 
-    <div class="card section" style="background:transparent;box-shadow:none;padding:0;border:none;">
-      <div class="advice" id="adviceBox"></div>
+    <!-- 解锁卡片：未解锁时显示 -->
+    <div class="unlock-card" id="unlockCard">
+      <div class="unlock-icon">🔒</div>
+      <div class="unlock-title">完整解读报告已生成</div>
+      <div class="unlock-desc">输入你的解锁码，即可查看「重点关注」「深度解读与建议」完整内容。解锁码为付费专属，请勿转发他人。</div>
+      <div class="unlock-row">
+        <input type="text" id="codeInput" placeholder="请输入解锁码，如 NP-XXXXXXXX-XXXX" maxlength="22" />
+        <button class="btn unlock-btn" id="unlockBtn">解锁查看</button>
+      </div>
+      <div class="unlock-tip" id="unlockTip">解锁码在你购买后由平台自动发放</div>
     </div>
 
-    <div class="disclaimer" id="disclaimerBox"></div>
+    <!-- 详细报告：解锁后显示 -->
+    <div id="reportDetail" hidden>
+      <div class="card section">
+        <div id="insights"></div>
+      </div>
+      <div class="card section" style="background:transparent;box-shadow:none;padding:0;border:none;">
+        <div class="advice" id="adviceBox"></div>
+      </div>
+      <div class="disclaimer" id="disclaimerBox"></div>
+    </div>
 
     <div class="result-actions">
       <button class="btn" id="restartBtn">重新测评</button>
@@ -263,6 +291,12 @@
 <div class="toast" id="toast"></div>
 
 <script>
+/* ============================================================
+   配置区
+   ============================================================ */
+// ★ 解锁码签名密钥（与生成 1000 个码时使用的密钥一致，勿外泄）
+const VERIFY_SECRET = "628ef7077e448473fa5a8c4e5ebdf2a12bc880580725bea91c1391b0d4521223";
+
 /* ============================================================
    测试数据配置区 —— 后续做新测试，只需替换这里的内容即可
    ============================================================ */
@@ -457,6 +491,19 @@ function renderResult(index, level, dims){
     });
   }, 250);
 
+  // ===== 完整报告内容：默认锁定，解锁后显示 =====
+  window.__res = { index, level, dims };
+  $("#unlockCard").hidden = false;
+  $("#reportDetail").hidden = true;
+  $("#codeInput").value = "";
+  // 本机已解锁过则直接显示完整报告（同一人无需重复输入）
+  if (localStorage.getItem("npd_unlocked") === "1") {
+    unlockReport();
+  }
+}
+
+function unlockReport(){
+  const { level, dims } = window.__res;
   // 高分维度解读
   const ins = $("#insights");
   ins.innerHTML = "";
@@ -487,6 +534,8 @@ function renderResult(index, level, dims){
   adv.innerHTML = html;
 
   $("#disclaimerBox").innerHTML = QUIZ.disclaimer;
+  $("#unlockCard").hidden = true;
+  $("#reportDetail").hidden = false;
 }
 
 function animateNumber(el, from, to, dur){
@@ -518,7 +567,50 @@ $("#restartBtn").addEventListener("click", ()=>{
   renderQuestion();
   show("quiz");
 });
+
+// ===== 解锁码验证（一次性码）=====
+$("#unlockBtn").addEventListener("click", verifyCode);
+$("#codeInput").addEventListener("keydown", (e)=>{ if(e.key === "Enter") verifyCode(); });
+
+async function verifyCode(){
+  const code = ($("#codeInput").value || "").trim();
+  if(!code){ showToast("请输入解锁码"); return; }
+  const btn = $("#unlockBtn");
+  btn.disabled = true;
+  const oldText = btn.textContent;
+  btn.textContent = "验证中…";
+  try {
+    const res = await checkCode(code);
+    if(res.ok){
+      localStorage.setItem("npd_unlocked", "1");
+      unlockReport();
+      showToast("解锁成功，请下滑查看完整报告");
+    } else {
+      showToast(res.msg || "解锁码无效");
+    }
+  } catch(e) {
+    showToast("验证失败，请稍后重试");
+  } finally {
+    btn.disabled = false;
+    btn.textContent = oldText;
+  }
+}
+
+// 本地校验解锁码：NP + 8位随机 + 4位 HMAC-SHA256 签名（与发码脚本算法一致）
+async function checkCode(raw){
+  const code = String(raw).replace(/[\s\-_]/g, "").toUpperCase();
+  const m = /^NP([A-Z2-9]{8})([0-9A-F]{4})$/.exec(code);
+  if(!m) return { ok:false, msg:"解锁码格式不正确，请检查是否输入完整" };
+  const body = m[1], sig = m[2];
+  const key = await crypto.subtle.importKey(
+    "raw", new TextEncoder().encode(VERIFY_SECRET),
+    { name:"HMAC", hash:"SHA-256" }, false, ["sign"]
+  );
+  const buf = await crypto.subtle.sign("HMAC", key, new TextEncoder().encode(body));
+  const hex = Array.from(new Uint8Array(buf)).map(b => b.toString(16).padStart(2,"0")).join("");
+  if(hex.slice(0,4).toUpperCase() !== sig) return { ok:false, msg:"解锁码无效，请核对后重新输入" };
+  return { ok:true };
+}
 </script>
-
-
-</body></html>
+</body>
+</html>
